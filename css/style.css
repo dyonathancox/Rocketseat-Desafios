@@ -12,8 +12,8 @@
     --bg-fundo: hsl(283, 47%, 97%);
     --input-color: hsl(244, 38%, 28%);
 }
-body{
-    max-width: 43.0rem;
+.container{
+    width: 42rem;
     margin: auto;
     background-color: var(--bg-fundo);
     color: var(--texto-color);
@@ -21,7 +21,7 @@ body{
 header{
     display: flex;
     flex-direction: column;
-    margin: auto;
+    align-items: center;
 }
 h1{
     margin-top: 1.7rem;
@@ -52,8 +52,6 @@ section{
     border-radius: 2rem;
     max-width: 35rem;
     padding: 2.64rem;
-    -webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
-	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
 }
 section img{
     margin-bottom: 3.3rem;
@@ -104,21 +102,56 @@ button:hover{
 input{
     all: unset;
 }
+.star{ 
+    display: none;
+}
 footer{
     background-color: var(--input-color);
     color: var(--bg-fundo);
     padding: 3rem;
     margin-top: 6.5rem;
 }
-@keyframes slide-in-bottom {
-    0% {
-      -webkit-transform: translateY(1000px);
-              transform: translateY(1000px);
-      opacity: 0;
+
+@media only screen and (min-width: 1120px) {
+    .container{
+        width: 144rem;
     }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
+    header{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start; /* Alinha os itens ao topo */
     }
+    heaer h1, p{
+        margin-top: 50px;
+        align-items: start;
+    }
+    .principal{
+        width: 71.9rem;
+        align-items: end;
+    }
+    .section-wrapper{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .contact {
+        display: flex;
+      }
+      form {
+        width: 50%;
+        align-items: start;
+      }
+      .star {
+        display: flex;
+        width: 50%;
+      }
+      .star img{
+        display: flex;
+        margin-left: 7.5rem;
+        align-items: end;
+      }
+      footer{
+        height: 7.8rem;
+        margin-top: 0;
+      }
+    
   }
