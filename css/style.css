@@ -15,13 +15,17 @@
 .container{
     width: 42rem;
     margin: auto;
-    background-color: var(--bg-fundo);
+    
     color: var(--texto-color);
 }
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+header svg{
+    width: 100%;
+    object-fit: cover;
 }
 h1{
     margin-top: 1.7rem;
@@ -35,9 +39,10 @@ p{
     font-size: 2rem;
     font-weight: 600;
 }
-.seta{
+section .seta{
     width: 5.8rem;
     margin: auto;
+    display: flex;
     padding: 3.5rem 0 9.3rem;
 }
 .section-wrapper{
@@ -47,21 +52,21 @@ p{
     flex-direction: column;
     gap: 5rem;
 }
-section{
+main section{
     background-color: var(--bg-fundo);
     border-radius: 2rem;
     max-width: 35rem;
     padding: 2.64rem;
 }
-section img{
+main section img{
     margin-bottom: 3.3rem;
 }
-section h2{
+main section h2{
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 2rem;
 }
-section p{
+main section p{
     font-size: 1.6rem;
     text-align: start;
 
@@ -112,45 +117,76 @@ footer{
     margin-top: 6.5rem;
 }
 
-@media only screen and (min-width: 1120px) {
+@media only screen and (min-width: 1024px) {
     .container{
-        width: 144rem;
+        width: 100%;
     }
-    header{
+    .header-content{
+        width: 100%;
         display: flex;
         flex-direction: row-reverse;
-        align-items: flex-start; /* Alinha os itens ao topo */
+        margin-bottom: 10rem;
+        justify-content: space-between;
     }
-    heaer h1, p{
-        margin-top: 50px;
-        align-items: start;
+    header{
+        width: 144rem;
+        margin: auto;
+        
+    }
+    header h1{
+        
+        font-size: 5.8rem;
+        margin: 0;
+    }
+    header p{
+        font-size: 3.2rem;
+        margin: 0;
     }
     .principal{
-        width: 71.9rem;
-        align-items: end;
+        width: 50%;
+    }
+    header section{
+        margin-top: 31.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .section-content{
+        width: 100%;
+        background-color: #343193;
     }
     .section-wrapper{
+        width: 144rem;
+        margin: 0 auto;
         flex-direction: row;
-        justify-content: center;
+        padding: 6.4rem 0;
+        justify-content: space-between;
     }
     .contact {
         display: flex;
+        width: 144rem;
+        margin: auto;
+        justify-content: space-between;
       }
       form {
         width: 50%;
-        align-items: start;
+        padding: 0;
+        justify-content: space-between;
       }
       .star {
         display: flex;
-        width: 50%;
+        
+        justify-content: space-between;
       }
       .star img{
         display: flex;
-        margin-left: 7.5rem;
-        align-items: end;
+        object-fit: cover;
       }
       footer{
         height: 7.8rem;
+        margin-top: 0;
+      }
+      footer p{
         margin-top: 0;
       }
     
