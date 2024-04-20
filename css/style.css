@@ -8,26 +8,29 @@
 :root{
     font-size: 62.5%;
     font-family: "Mulish", sans-serif;
-    --texto-color: hsl(320, 69%, 42%);
+    --texto: hsl(320, 69%, 42%);
     --bg-fundo: hsl(283, 47%, 97%);
-    --input-color: hsl(244, 38%, 28%);
+    --bg-color: linear-gradient(90deg, rgba(52,49,147,1) 0%, rgba(48,44,99,1) 100%);
+    --input: rgba(52,49,147,1);
 }
 .container{
     width: 42rem;
     margin: auto;
-    
-    color: var(--texto-color);
+    color: var(--texto);
 }
 header{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 header svg{
-    width: 100%;
+    width: 36.4rem;
+    height: 37rem;
     object-fit: cover;
 }
 h1{
+    color: var(--bg-color);
     margin-top: 1.7rem;
     font-size: 3.2rem;
     font-weight: 800;
@@ -39,21 +42,27 @@ p{
     font-size: 2rem;
     font-weight: 600;
 }
-section .seta{
-    width: 5.8rem;
-    margin: auto;
+.sec-img{
     display: flex;
-    padding: 3.5rem 0 9.3rem;
+    align-items: center; /* Para alinhar verticalmente */
+    justify-content: center;
+}
+.seta{
+    width: 5.8rem;
+    height: 10rem;
+    margin: 3.5rem 0 9.3rem;
+}
+.section-content{
+    background: var(--bg-color);
 }
 .section-wrapper{
-    background: #343193;
     padding: 5rem;
     display: flex;
     flex-direction: column;
     gap: 5rem;
 }
 main section{
-    background-color: var(--bg-fundo);
+    background: var(--bg-fundo);
     border-radius: 2rem;
     max-width: 35rem;
     padding: 2.64rem;
@@ -79,7 +88,7 @@ form{
     padding: 4rem;
 }
 .input-wrapper, textarea{
-    border: 2px solid var(--input-color);
+    border: 2px solid var(--input);
     border-radius: 1.6rem;
     align-items: center;
     display: flex;
@@ -95,14 +104,14 @@ form textarea{
 }
 form button{
     color: var(--bg-fundo);
-    background-color: var(--input-color);
+    background: var(--input);
     border-radius: 1.6rem;
     padding: 2rem;
     border: none;
     font-size: 1.6rem;
 }
 button:hover{
-    background-color: #f37c37;
+    background: var(--texto);
 }
 input{
     all: unset;
@@ -111,7 +120,7 @@ input{
     display: none;
 }
 footer{
-    background-color: var(--input-color);
+    background: var(--bg-color);
     color: var(--bg-fundo);
     padding: 3rem;
     margin-top: 6.5rem;
@@ -123,40 +132,48 @@ footer{
     }
     .header-content{
         width: 100%;
+        
+        margin-bottom: 10.3rem;
         display: flex;
         flex-direction: row-reverse;
-        margin-bottom: 10rem;
         justify-content: space-between;
     }
     header{
-        width: 144rem;
+        width: 112rem;
         margin: auto;
-        
+        white-space: nowrap;     
     }
     header h1{
-        
-        font-size: 5.8rem;
+        font-size: 5.5rem;
         margin: 0;
     }
     header p{
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         margin: 0;
     }
-    .principal{
-        width: 50%;
+    header svg{
+        width: 100%;
+        height: 100%;
     }
-    header section{
-        margin-top: 31.2rem;
+    .sec-text{
+        margin-top: 21.2rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
+    .seta{
+        margin-top: 17.9rem;
+        padding: 0;
+    }
+    main{
+        margin-top: 0;
+    }
     .section-content{
         width: 100%;
-        background-color: #343193;
+        
     }
     .section-wrapper{
-        width: 144rem;
+        width: 112rem;
         margin: 0 auto;
         flex-direction: row;
         padding: 6.4rem 0;
@@ -164,7 +181,7 @@ footer{
     }
     .contact {
         display: flex;
-        width: 144rem;
+        width: 112rem;
         margin: auto;
         justify-content: space-between;
       }
@@ -174,17 +191,15 @@ footer{
         justify-content: space-between;
       }
       .star {
-        display: flex;
         
-        justify-content: space-between;
-      }
-      .star img{
-        display: flex;
-        object-fit: cover;
-      }
+        width: 62rem;
+        height: 58.8rem;
+        display: block;
+        position: absolute;
+        right: 0;
+    }
       footer{
         height: 7.8rem;
-        margin-top: 0;
       }
       footer p{
         margin-top: 0;
