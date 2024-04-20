@@ -116,8 +116,7 @@ button:hover{
 input{
     width: 100%;
     padding: 1rem;
-    border: none;
-    
+    border: none; 
 }
 .star{ 
     display: none;
@@ -173,7 +172,6 @@ footer{
     }
     .section-content{
         width: 100%;
-        
     }
     .section-wrapper{
         width: 112rem;
@@ -194,8 +192,8 @@ footer{
         justify-content: space-between;
       }
       .star {
-        width: 62rem;
-        height: 58.8rem;
+        width: 66rem;
+        
         display: block;
         position: absolute;
         right: 0;
