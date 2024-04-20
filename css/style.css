@@ -114,7 +114,10 @@ button:hover{
     background: var(--texto);
 }
 input{
-    all: unset;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    
 }
 .star{ 
     display: none;
@@ -191,7 +194,6 @@ footer{
         justify-content: space-between;
       }
       .star {
-        
         width: 62rem;
         height: 58.8rem;
         display: block;
